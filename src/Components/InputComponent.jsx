@@ -10,7 +10,7 @@ function InputComponent() {
     e.preventDefault();
     axios({
       method: "post",
-      url: "http://localhost:8080/new-item",
+      url: "https://backen3.herokuapp.com/new-item",
       data: {
         item,
         priority,

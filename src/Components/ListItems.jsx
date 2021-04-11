@@ -14,7 +14,7 @@ function ListItems() {
   useEffect(() => {
     axios({
       method: "get",
-      url: "http://localhost:8080/all-item",
+      url: "https://backen3.herokuapp.com/all-item",
     })
       .then((result) => {
         const allItemNotDone = result.data.filter((item) => !item.isDone);
