@@ -8,3 +8,7 @@
 .hover {
   cursor: pointer;
 }
+
+.title {
+  text-transform: uppercase;
+}

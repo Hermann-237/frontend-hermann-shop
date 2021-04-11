@@ -42,6 +42,10 @@ function ListItems() {
     axios({
       method: "put",
       url: `http://localhost:8080/update/${idCard}`,
+      data: {
+        item: aChanger,
+        priority: priorityToggle,
+      },
     })
       .then((data) => {
         console.log("mon data", data);
@@ -81,10 +85,12 @@ function ListItems() {
   return (
     <div>
       {notDoneItems.length === 0 ? (
-        ""
+        <p></p>
       ) : (
         <Fragment>
-          <h1>Item's lists</h1>
+          <h5 className=" my-4 text-primary title">
+            Create your grocery shopping list
+          </h5>
 
           <table className="table table-dark container">
             <thead>
@@ -117,6 +123,7 @@ function ListItems() {
                         id={item._id}
                         onClick={clickUn}
                       ></i>
+
                       {/* My model section start here*/}
                       <div
                         className="modal fade "
@@ -187,6 +194,7 @@ function ListItems() {
                                     <button
                                       className="btn btn-info mt-sm-2"
                                       type="submit"
+                                      data-dismiss="modal"
                                       id={item._id}
                                       onClick={updateItem}
                                     >
@@ -235,7 +243,7 @@ function ListItems() {
         <p></p>
       ) : (
         <Fragment>
-          <h1>Are done</h1>
+          <h5 className=" my-4 text-primary title">Your shopped list</h5>
           <table className="table table-dark container">
             <thead>
               <tr>
