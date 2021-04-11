@@ -28,14 +28,14 @@ function InputComponent() {
     <Form className="container mt-5 ">
       <Form.Row>
         <Form.Group controlId="formGridCity" className="col-sm-6">
-          <Form.Label>Items</Form.Label>
+          <Form.Label>Grocery</Form.Label>
           <Form.Control
             type="text"
             name="item"
             value={item}
             className="form-control"
             id="itemFiel"
-            placeholder="Enter the item"
+            placeholder="Enter the grocery"
             required
             onChange={(e) => setstateItem(e.target.value)}
           />
