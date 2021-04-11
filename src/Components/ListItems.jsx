@@ -1,11 +1,12 @@
 import { useState, useEffect, Fragment } from "react";
 import axios from "axios";
+import { Table } from "react-bootstrap";
 
 function ListItems() {
-  const [item1, setstateItem1] = useState("");
+  /* const [item1, setstateItem1] = useState(""); */
+  /* const [priority1, setstatePriority1] = useState("1"); */
   const [idCard, setstateIdCard] = useState("");
   const [aChanger, setstateAChanger] = useState("");
-  const [priority1, setstatePriority1] = useState("1");
   const [priorityToggle, setstatePriorityToggle] = useState("1");
   const [notDoneItems, setstateNotDoneItems] = useState([]);
   const [doneItems, setstateDoneItems] = useState([]);
@@ -30,7 +31,7 @@ function ListItems() {
     console.log(deleteItem);
     axios({
       method: "delete",
-      url: `http://localhost:8080/${deleteItem}`,
+      url: `https://backen3.herokuapp.com/${deleteItem}`,
     })
       .then(() => console.log("done!"))
       .catch((e) => console.log(e.message));
@@ -41,7 +42,7 @@ function ListItems() {
     console.log("idcards", idCard);
     axios({
       method: "put",
-      url: `http://localhost:8080/update/${idCard}`,
+      url: `https://backen3.herokuapp.com/update/${idCard}`,
       data: {
         item: aChanger,
         priority: priorityToggle,
@@ -58,7 +59,7 @@ function ListItems() {
     const changeItem = e.target.id;
     axios({
       method: "post",
-      url: `http://localhost:8080/${changeItem}`,
+      url: `https://backen3.herokuapp.com/${changeItem}`,
     })
       .then(() => console.log("done!"))
       .catch((e) => console.log(e.message));
@@ -69,11 +70,11 @@ function ListItems() {
     console.log(idCard);
     axios({
       method: "get",
-      url: `http://localhost:8080/find/${e.target.id}`,
+      url: `https://backen3.herokuapp.com/find/${e.target.id}`,
     })
       .then((result) => {
-        setstateItem1(result.data.item);
-        setstatePriority1(result.data.priority);
+        /*         setstateItem1(result.data.item);
+        setstatePriority1(result.data.priority); */
         setstateAChanger(result.data.item);
         setstatePriorityToggle(result.data.priority);
         console.log(aChanger);
@@ -92,7 +93,7 @@ function ListItems() {
             Create your grocery shopping list
           </h5>
 
-          <table className="table table-dark container">
+          <Table className="table table-dark container">
             <thead>
               <tr>
                 <th scope="col" className="text-left pl-3">
@@ -235,7 +236,7 @@ function ListItems() {
                 );
               })}
             </tbody>
-          </table>
+          </Table>
         </Fragment>
       )}
 
@@ -244,7 +245,7 @@ function ListItems() {
       ) : (
         <Fragment>
           <h5 className=" my-4 text-primary title">Your shopped list</h5>
-          <table className="table table-dark container">
+          <Table className="table table-dark container">
             <thead>
               <tr>
                 <th scope="col" className="text-center pl-3">
@@ -272,7 +273,7 @@ function ListItems() {
                 );
               })}
             </tbody>
-          </table>
+          </Table>
         </Fragment>
       )}
     </div>
