@@ -5,7 +5,9 @@ function Header() {
   return (
     <Fragment>
       <Navbar expand="lg" className="container my-3">
-        <Navbar.Brand href="/">Logo</Navbar.Brand>
+        <Navbar.Brand href="/" className="text-danger">
+          Logo
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
