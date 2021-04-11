@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/frontend-hermann-shop/static/css/main.14168b7d.chunk.css",
-    "main.js": "/frontend-hermann-shop/static/js/main.0fe35387.chunk.js",
-    "main.js.map": "/frontend-hermann-shop/static/js/main.0fe35387.chunk.js.map",
+    "main.js": "/frontend-hermann-shop/static/js/main.b1f1a0ad.chunk.js",
+    "main.js.map": "/frontend-hermann-shop/static/js/main.b1f1a0ad.chunk.js.map",
     "runtime-main.js": "/frontend-hermann-shop/static/js/runtime-main.678a460d.js",
     "runtime-main.js.map": "/frontend-hermann-shop/static/js/runtime-main.678a460d.js.map",
     "static/js/2.9f53591e.chunk.js": "/frontend-hermann-shop/static/js/2.9f53591e.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.678a460d.js",
     "static/js/2.9f53591e.chunk.js",
     "static/css/main.14168b7d.chunk.css",
-    "static/js/main.0fe35387.chunk.js"
+    "static/js/main.b1f1a0ad.chunk.js"
   ]
 }
