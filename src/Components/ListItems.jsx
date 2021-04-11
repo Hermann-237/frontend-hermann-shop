@@ -3,8 +3,6 @@ import axios from "axios";
 import { Table } from "react-bootstrap";
 
 function ListItems() {
-  /* const [item1, setstateItem1] = useState(""); */
-  /* const [priority1, setstatePriority1] = useState("1"); */
   const [idCard, setstateIdCard] = useState("");
   const [aChanger, setstateAChanger] = useState("");
   const [priorityToggle, setstatePriorityToggle] = useState("1");
@@ -64,6 +62,17 @@ function ListItems() {
       .then(() => console.log("done!"))
       .catch((e) => console.log(e.message));
   };
+
+  const returnItToTheShop = (e) => {
+    const changeItem = e.target.id;
+    axios({
+      method: "post",
+      url: `https://backen3.herokuapp.com/not-done/${changeItem}`,
+    })
+      .then(() => console.log("done!"))
+      .catch((e) => console.log(e.message));
+  };
+
   const clickUn = (e) => {
     console.log(e.target.id);
     setstateIdCard(e.target.id);
@@ -73,8 +82,6 @@ function ListItems() {
       url: `https://backen3.herokuapp.com/find/${e.target.id}`,
     })
       .then((result) => {
-        /*         setstateItem1(result.data.item);
-        setstatePriority1(result.data.priority); */
         setstateAChanger(result.data.item);
         setstatePriorityToggle(result.data.priority);
         console.log(aChanger);
@@ -100,10 +107,10 @@ function ListItems() {
                   Priorities
                 </th>
                 <th scope="col" className="text-left pl-3">
-                  Item Name
+                  Foodstuffs Name
                 </th>
                 <th scope="col" className="text-left pl-3">
-                  Action
+                  Settings
                 </th>
               </tr>
             </thead>
@@ -187,9 +194,6 @@ function ListItems() {
                                       <option value="4">4</option>
                                       <option value="5">5</option>
                                     </select>
-                                    <div className="invalid-feedback">
-                                      Please select a valid state.
-                                    </div>
                                   </div>
                                   <div className="col-md-3 mb-3 mt-sm-4">
                                     <button
@@ -199,7 +203,7 @@ function ListItems() {
                                       id={item._id}
                                       onClick={updateItem}
                                     >
-                                      Save
+                                      update
                                     </button>
                                   </div>
                                 </div>
@@ -249,7 +253,7 @@ function ListItems() {
             <thead>
               <tr>
                 <th scope="col" className="text-center pl-3">
-                  Item Name
+                  Foodstuffs in the basket
                 </th>
               </tr>
             </thead>
@@ -266,6 +270,12 @@ function ListItems() {
                           title={`Delete ${item.item} `}
                           id={item._id}
                           onClick={deleteItemHandler}
+                        ></i>
+                        <i
+                          className="fas fa-undo-alt hover text-primary mx-2"
+                          title={`Return  ${item.item} in the shop`}
+                          id={item._id}
+                          onClick={returnItToTheShop}
                         ></i>
                       </del>
                     </th>
