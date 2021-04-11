@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/frontend-hermann-shop/static/css/main.14168b7d.chunk.css",
+    "main.js": "/frontend-hermann-shop/static/js/main.527e357b.chunk.js",
+    "main.js.map": "/frontend-hermann-shop/static/js/main.527e357b.chunk.js.map",
+    "runtime-main.js": "/frontend-hermann-shop/static/js/runtime-main.83edc776.js",
+    "runtime-main.js.map": "/frontend-hermann-shop/static/js/runtime-main.83edc776.js.map",
+    "static/js/2.5f8e34ea.chunk.js": "/frontend-hermann-shop/static/js/2.5f8e34ea.chunk.js",
+    "static/js/2.5f8e34ea.chunk.js.map": "/frontend-hermann-shop/static/js/2.5f8e34ea.chunk.js.map",
+    "static/js/3.5c27081c.chunk.js": "/frontend-hermann-shop/static/js/3.5c27081c.chunk.js",
+    "static/js/3.5c27081c.chunk.js.map": "/frontend-hermann-shop/static/js/3.5c27081c.chunk.js.map",
+    "index.html": "/frontend-hermann-shop/index.html",
+    "static/css/main.14168b7d.chunk.css.map": "/frontend-hermann-shop/static/css/main.14168b7d.chunk.css.map",
+    "static/js/2.5f8e34ea.chunk.js.LICENSE.txt": "/frontend-hermann-shop/static/js/2.5f8e34ea.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83edc776.js",
+    "static/js/2.5f8e34ea.chunk.js",
+    "static/css/main.14168b7d.chunk.css",
+    "static/js/main.527e357b.chunk.js"
+  ]
+}
