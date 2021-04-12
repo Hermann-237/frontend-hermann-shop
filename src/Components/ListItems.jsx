@@ -122,9 +122,9 @@ function ListItems() {
                       {item.priority}
                     </th>
                     <td className="text-left pl-3 ">{item.item}</td>
-                    <td className="text-left pl-3">
+                    <td className="text-left d-flex pl-3">
                       <i
-                        className="fas fa-edit hover text-primary mx-2 "
+                        className="fas fa-edit hover text-primary mx-2"
                         data-toggle="modal"
                         data-target="#exampleModal"
                         title={`Update ${item.item}`}
@@ -136,7 +136,7 @@ function ListItems() {
                       <div
                         className="modal fade "
                         id="exampleModal"
-                        tabindex="-1"
+                        tabIndex="-1"
                         aria-labelledby="exampleModalLabel"
                         aria-hidden="true"
                       >

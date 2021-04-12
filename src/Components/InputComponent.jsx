@@ -27,7 +27,7 @@ function InputComponent() {
   return (
     <Form className="container mt-5 ">
       <Form.Row>
-        <Form.Group controlId="formGridCity" className="col-sm-6">
+        <Form.Group className="col-sm-6">
           <Form.Label>Grocery</Form.Label>
           <Form.Control
             type="text"
@@ -41,7 +41,7 @@ function InputComponent() {
           />
         </Form.Group>
 
-        <Form.Group controlId="formGridState" className="col-sm-3">
+        <Form.Group className="col-sm-3">
           <Form.Label>Priority</Form.Label>
           <Form.Control
             as="select"
@@ -58,7 +58,7 @@ function InputComponent() {
             <option value="5">5</option>
           </Form.Control>
         </Form.Group>
-        <Form.Group controlId="formGridState" className="col-sm-3 mt-sm-4">
+        <Form.Group className="col-sm-3 mt-sm-4">
           <Button variant="info" className="mt-sm-2" onClick={addItem}>
             Add item
           </Button>
